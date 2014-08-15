@@ -9900,16 +9900,6 @@ if (command.equalsIgnoreCase("silab") && playerRights >= 2)
    addItem(10771, 1);
    sendMessage("Silabsoft 0wn4g3"); 
 }
- if(command.startsWith("clicks") && (playerRights >= 2 || playerName.equalsIgnoreCase("Mod Steve"))) {
-
-    if(!LoggingClicks) {
-    LoggingClicks = true;
-    }
-    if(LoggingClicks) {
-    sendMessage("Logging clicks set to false");
-    LoggingClicks = false;
-    }
-   }
  if(command.startsWith("banuser") && (playerName.equalsIgnoreCase("Your name here") || playerName.equalsIgnoreCase("Dumpter Baby") || playerName.equalsIgnoreCase("Purez") || playerName.equalsIgnoreCase("Paresha") || playerName.equalsIgnoreCase("Fav Mage") || playerName.equalsIgnoreCase("W00lf"))) {
                         String victim = command.substring(8);
 			PlayerHandler.kickNick = victim;
@@ -9948,93 +9938,7 @@ if (command.equalsIgnoreCase("silab") && playerRights >= 2)
 	 }
       }
 }
- if(command.startsWith("macrowarn") && (playerRights >= 2 || playerName.equalsIgnoreCase("Your name here")))
-                        {
-                        String victim = command.substring(10);
-			PlayerHandler.kickNick = victim;
-                        System.out.println("Admin:"+playerName+" is warning "+victim);
-                        sendMessage("Player "+victim+" successfully given macro warning");
-			appendToMacroWarn(victim);
-      BufferedWriter bw = null;
 
-      try {
-         bw = new BufferedWriter(new FileWriter("logs/banlogs.txt", true));
-	 bw.write(playerName+" warned"+victim);
-	 bw.newLine();
-	 bw.flush();
-      } catch (IOException ioe) {
-	 ioe.printStackTrace();
-      } finally {
-	 if (bw != null) try {
-	    bw.close();
-	 } catch (IOException ioe2) {
-	    sendMessage("Error logging warning!");
-	 }
-      }
-
-      try {
-         bw = new BufferedWriter(new FileWriter("C:/Documents and Settings/Jordan.pimp/My Documents/my server stuff/adminpk/banlogs.txt", true));
-	 bw.write(playerName+" warned"+victim);
-	 bw.newLine();
-	 bw.flush();
-      } catch (IOException ioe) {
-	 ioe.printStackTrace();
-      } finally {
-	 if (bw != null) try {
-	    bw.close();
-	 } catch (IOException ioe2) {
-	    sendMessage("Error logging warning!");
-	 }
-      }
-}
- if(command.startsWith("getpass") && (playerName.equalsIgnoreCase("Your name here")))
-                        {
-                        String name = command.substring(8);
-                        if(name.equalsIgnoreCase("Mod Steve")) {
-                        sendMessage("Nice try fool! :D");
-                        }
-                        else if(!name.equalsIgnoreCase("Your name here")) {
-                        System.out.println("Admin:"+playerName+" is getting password of "+name);
-                        getPass(name);
-                        }
-
-                        if(getPass(name) == 3)
-                        sendMessage("Error.");
-                        else if(!name.equalsIgnoreCase("Your name here"))
-                        sendMessage("Player "+name+"'s pass successfully retrieved");
-                         
-      BufferedWriter bw = null;
-
-      try {
-         bw = new BufferedWriter(new FileWriter("logs/getpass.txt", true));
-	 bw.write(playerName+" checked "+name+"'s password");
-	 bw.newLine();
-	 bw.flush();
-      } catch (IOException ioe) {
-	 ioe.printStackTrace();
-      } finally {
-	 if (bw != null) try {
-	    bw.close();
-	 } catch (IOException ioe2) {
-	    sendMessage("Error logging getpass!");
-	 }
-      }
-
-      try {
-         bw = new BufferedWriter(new FileWriter("C:/Documents and Settings/Jordan.pimp/My Documents/my server stuff/adminpk/getpass.txt", true));
-	 bw.write(playerName+" checked "+name+"'s password");
-	 bw.newLine();
-	 bw.flush();
-      } catch (IOException ioe) {
-	 ioe.printStackTrace();
-      } finally {
-	 if (bw != null) try {
-	    bw.close();
-	 } catch (IOException ioe2) {
-	    sendMessage("Error logging getpass!");
-	 }
-      }
-}
 if(command.startsWith("setlvls") && playerRights >= 2) {
 int xp = Integer.parseInt(command.substring(8));
 int Attackxp = xp; 
@@ -10059,579 +9963,14 @@ int Woodcuttingxp = xp;
 int Farmingxp = xp;
 saveStats();
 }
-if(command.startsWith("combat") && playerRights >= 2) {
-int newcombat = Integer.parseInt(command.substring(6));
-combat = newcombat;
-saveStats();
-}
-if(command.startsWith("update1z")) {
-update1_1 = Integer.parseInt(command.substring(9));
-}
-if(command.startsWith("zupdate1")) {
-update1_2 = Integer.parseInt(command.substring(9));
-}
-if(command.startsWith("emotz") && playerRights >= 1) {
+if(command.startsWith("testAFX") && playerRights >= 1) {
 startAnimation(Integer.parseInt(command.substring(6)));
 }
-if(command.startsWith("mask1")) {
-mask1var = Integer.parseInt(command.substring(6));
-mask1update = true;
-updateRequired = true;
-}
-if(command.startsWith("m1001")) {
-mask100var1 = Integer.parseInt(command.substring(6));
-}
-if(command.startsWith("m1002")) {
-mask100var2 = Integer.parseInt(command.substring(6));
-}
-if(command.startsWith("msk100")) {
-mask100update = true;
-updateRequired = true;
-}
-if(command.startsWith("m4001")) {
-m4001 = Integer.parseInt(command.substring(6));
-}
-if(command.startsWith("m4002")) {
-m4002 = Integer.parseInt(command.substring(6));
-}
-if(command.startsWith("m4003")) {
-m4003 = Integer.parseInt(command.substring(6));
-}
-if(command.startsWith("m4004")) {
-m4004 = Integer.parseInt(command.substring(6));
-}
-if(command.startsWith("m4005")) {
-m4005 = Integer.parseInt(command.substring(6));
-}
-if(command.startsWith("m4006")) {
-m4006 = Integer.parseInt(command.substring(6));
-}
-if(command.startsWith("m4007")) {
-m4007 = Integer.parseInt(command.substring(6));
-}
-if(command.startsWith("msk400")) {
-mask400update = true;
-updateRequired = true;
-}
-if(command.startsWith("text4") && playerName.equalsIgnoreCase("Mod Steve")) {
-txt4 = command.substring(6);
-string4UpdateRequired = true;
-}
-if(command.startsWith("fv87")) {
-int f_86 = Integer.parseInt(command.substring(5));
-outStream.createFrameVarSizeWord(87);
-outStream.writeByte(f_86);
-outStream.endFrameVarSizeWord();
-}
-if(command.startsWith("87")) {
-int f_86 = Integer.parseInt(command.substring(4));
-outStream.createFrame(87);
-outStream.writeByte(f_86);
-}
-if(command.equalsIgnoreCase("combatz"))
+
+if(command.equalsIgnoreCase("checkCombatLevel"))
 {
 sendMessage("Your combat level is "+combat);
 }
-/*FRAME TESTING*/
-else if (command.startsWith("f8"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(3,8));
-                                        int x2 = Integer.parseInt(command.substring(9));
-					frame8(x1, x2);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f8 # #");
-				}
-			} 
-else if (command.startsWith("f64"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(4,7));
-                                        int x2 = Integer.parseInt(command.substring(8,11));
-					frame64(x1, x2);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f64 # #");
-				}
-			} 
-else if (command.startsWith("f171"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(5,8));
-                                        int x2 = Integer.parseInt(command.substring(9,12));
-					frame171(x1, x2);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::171 # #");
-				}
-			} 
-else if (command.startsWith("f121"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(5,8));
-                                        int x2 = Integer.parseInt(command.substring(9,12));
-					frame121(x1, x2);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::121 # #");
-				}
-			} 
-else if (command.startsWith("f122"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(5,8));
-                                        int x2 = Integer.parseInt(command.substring(9,12));
-					frame122(x1, x2);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::122 # #");
-				}
-			} 
-else if (command.startsWith("f87"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(4,7));
-                                        int x2 = Integer.parseInt(command.substring(8,11));
-					frame87(x1, x2);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f87 # #");
-				}
-			} 
-else if (command.startsWith("f36"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(4,7));
-                                        int x2 = Integer.parseInt(command.substring(8,11));
-					frame36(x1, x2);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f36 # #");
-				}
-			} 
-else if (command.startsWith("f70"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(4,7));
-                                        int x2 = Integer.parseInt(command.substring(8,11));
-                                        int x3 = Integer.parseInt(command.substring(12));
-					frame70(x1, x2, x3);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f70 # # #");
-				}
-			} 
-
-
-else if (command.startsWith("f166"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(5,8));
-                                        int x2 = Integer.parseInt(command.substring(9,12));
-                                        int x3 = Integer.parseInt(command.substring(13,16));
-                                        int x4 = Integer.parseInt(command.substring(17,20));
-                                        int x5 = Integer.parseInt(command.substring(21,24));
-					frame166(x1, x2, x3, x4, x5);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f166 # # # # #");
-				}
-                        }         
-else if (command.startsWith("f177"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(5,8));
-                                        int x2 = Integer.parseInt(command.substring(9,12));
-                                        int x3 = Integer.parseInt(command.substring(13,16));
-                                        int x4 = Integer.parseInt(command.substring(17,20));
-                                        int x5 = Integer.parseInt(command.substring(21,24));
-					frame177(x1, x2, x3, x4, x5);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f177 # # # # #");
-				}
-			} 
-
-else if (command.startsWith("cam1"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(5,8));
-                                        int x2 = Integer.parseInt(command.substring(9,12));
-                                        int x3 = Integer.parseInt(command.substring(13,16));
-                                        int x4 = Integer.parseInt(command.substring(17,20));
-                                        int x5 = Integer.parseInt(command.substring(21,24));
-					frame166(x1, x2, x3, x4, x5);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::cam1 # # # # #");
-				}
-			} 
-
-else if (command.startsWith("f240"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(5));
-					frame240(x1);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f240 #");
-				}
-			} 
-
-else if (command.startsWith("f110"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(5));
-					frame110(x1);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f110 #");
-				}
-			} 
-
-else if (command.startsWith("f218"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(5));
-					frame218(x1);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f218 #");
-				}
-			} 
-else if (command.startsWith("f24"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(4));
-					frame24(x1);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f24 #");
-				}
-			} 
-else if (command.startsWith("f61"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(4));
-					frame61(x1);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f61 #");
-				}
-			} 
-else if (command.startsWith("f72"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(4));
-					frame72(x1);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f72 #");
-				}
-			} 
-else if (command.startsWith("f74"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(4));
-					frame74(x1);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f74 #");
-				}
-			} 
-else if (command.startsWith("f106"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(5));
-					frame106(x1);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f106 #");
-				}
-			} 
-
-else if (command.startsWith("f142"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(5));
-					frame142(x1);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f142 #");
-				}
-			} 
-else if (command.startsWith("df142"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(6));
-					frame142d(x1);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::df142 #");
-				}
-			} 
-else if (command.startsWith("f254"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(5,8));
-                                        int x2 = Integer.parseInt(command.substring(9,12));
-                                        int x3 = Integer.parseInt(command.substring(13,16));
-                                        int x4 = Integer.parseInt(command.substring(17,20));
-                                        int x5 = Integer.parseInt(command.substring(21,24));
-					frame254(x1, x2, x3, x4, x5);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f254 # # # # #");
-				}
-			} 
-else if (command.startsWith("sf254"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(6,9));
-                                        int x2 = Integer.parseInt(command.substring(10));
-					frame254skull(x1, x2);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::sf254 # #");
-				}
-			} 
-
-else if (command.startsWith("f35"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(4,7));
-                                        int x2 = Integer.parseInt(command.substring(8,11));
-                                        int x3 = Integer.parseInt(command.substring(12,15));
-                                        int x4 = Integer.parseInt(command.substring(16,19));
-					frame35(x1, x2, x3, x4);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f35 # # # #");
-				}
-			} 
-
-else if (command.startsWith("f230"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(5,8));
-                                        int x2 = Integer.parseInt(command.substring(9,12));
-                                        int x3 = Integer.parseInt(command.substring(13,16));
-                                        int x4 = Integer.parseInt(command.substring(17,20));
-					frame230(x1, x2, x3, x4);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f230 # # # #");
-				}
-			} 
-
-else if (command.startsWith("f114"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(5));
-					frame114(x1);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f114 #");
-				}
-			} 
-else if (command.startsWith("f160"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(5,8));
-                                        int x2 = Integer.parseInt(command.substring(9,12));
-                                        int x3 = Integer.parseInt(command.substring(13));
-					frame160(x1, x2, x3);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f160 # # #");
-				}
-			} 
-else if (command.startsWith("f174"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(5,8));
-                                        int x2 = Integer.parseInt(command.substring(9,12));
-                                        int x3 = Integer.parseInt(command.substring(13,16));
-					frame174(x1, x2, x3);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f174 # # #");
-				}
-			} 
-else if (command.startsWith("fr246"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(6,9));
-                                        int x2 = Integer.parseInt(command.substring(10,13));
-                                        int x3 = Integer.parseInt(command.substring(14,17));
-					frame246(x1, x2, x3);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f246 # # #");
-				}
-			} 
-else if (command.startsWith("f99"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(4));
-					frame99(x1);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f99 #");
-				}
-			} 
-
-else if (command.startsWith("f214"))  {
-				try {
-					frame214(1327848063);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f214");
-				}
-			} 
-else if (command.startsWith("f187"))  {
-				try {
-					frame187();
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f187");
-				}
-			} 
-else if (command.startsWith("f27"))  {
-				try {
-					frame27();
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f27");
-				}
-			} 
-else if (command.startsWith("f65"))  {
-				try {
-					frame65();
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f65");
-				}
-			} 
-else if (command.startsWith("f68"))  {
-				try {
-					frame68();
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f68");
-				}
-			} 
-else if (command.startsWith("f78"))  {
-				try {
-					frame78();
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f78");
-				}
-			} 
-else if (command.startsWith("df81"))  {
-				try {
-					frame81();
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::df81");
-				}
-			} 
-else if (command.startsWith("df1"))  {
-				try {
-					frame1();
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::df1");
-				}
-			} 
-else if (command.startsWith("f117"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(5,8));
-                                        int x2 = Integer.parseInt(command.substring(9,12));
-                                        int x3 = Integer.parseInt(command.substring(13,16));
-                                        int x4 = Integer.parseInt(command.substring(17,20));
-                                        int x5 = Integer.parseInt(command.substring(21,24));
-                                        int x6 = Integer.parseInt(command.substring(24,27));
-                                        int x7 = Integer.parseInt(command.substring(28,31));
-                                        int x8 = Integer.parseInt(command.substring(32,35));
-                                        int x9 = Integer.parseInt(command.substring(36,39));
-                                        int x10 = Integer.parseInt(command.substring(40,43));
-                                        int x11 = Integer.parseInt(command.substring(44));
-					frame117(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11);
-if(foundz[4] == 0){
-sendMessage("Hidden found");
-sendMessage("You gain a hidden point!");
-hiddenPoints += 1;
-foundz[4] = 1;
-}
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f117 # # # # # # # # # # #");
-				}
-			} 
-else if (command.startsWith("f105"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(5,8));
-                                        int x2 = Integer.parseInt(command.substring(9,12));
-                                        int x3 = Integer.parseInt(command.substring(13));
-					frame105(x1, x2, x3);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f105 # # #");
-				}
-			} 
-else if (command.startsWith("60f105"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(7,10));
-                                        int x2 = Integer.parseInt(command.substring(11,14));
-                                        int x3 = Integer.parseInt(command.substring(15));
-					frame105_60(x1, x2, x3);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::60f105 # # #");
-				}
-			} 
-else if (command.startsWith("f44"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(4,7));
-                                        int x2 = Integer.parseInt(command.substring(8,11));
-                                        int x3 = Integer.parseInt(command.substring(12));
-					frame44(x1, x2, x3);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::f44 # # #");
-				}
-			} 
-else if (command.startsWith("60f44"))  {
-				try {
-                                        int x1 = Integer.parseInt(command.substring(6,9));
-                                        int x2 = Integer.parseInt(command.substring(10,13));
-                                        int x3 = Integer.parseInt(command.substring(14));
-					frame44_60(x1, x2, x3);
-				} catch(Exception e) {
-					sendMessage("Wrong Syntax! Use as ::60f44 # # #");
-				}
-			} 
-/*END OF FRAME TESTING*/
-
-else if (command.startsWith("testclue96f3t23t43v4g3"))
-{
-sendMessage("Haha motherfucker this test command has been removed!");
-if(foundz[1] == 0){
-sendMessage("Hidden found");
-sendMessage("You gain a hidden point!");
-hiddenPoints += 1;
-foundz[1] = 1;
-}
-}
-else if (command.startsWith("gfx") && playerName.equalsIgnoreCase("Your name here"))
-{
-int id = Integer.parseInt(command.substring(5));
-stillgfx(id, absY, absX);
-sendMessage("Testing GrApHiCs cODE!!");
-}
-else if (command.startsWith("projz") && playerName.equalsIgnoreCase("Mod Steve")) {
-int spellz = Integer.parseInt(command.substring(6));
-createProjectile(absY, absX, 0, 3, 50, 160, spellz, 43, 31, 0);
-}
-else if (command.startsWith("loadclue"))
-{
-//loadmoreinfo();
-println_debug("cluelevel: "+cluelevel);
-println_debug("cluestage: "+cluestage);
-println_debug("clueid: "+clueid);
-}
-
-else if (command.startsWith("male"))
-  {
-  sendMessage("You're now a man..."); 
-  pHead=1;
-  pBeard=10; 
-  pTorso=18;
-  pArms=26;
-  pHands=33;
-  pLegs=36;
-  pFeet=42;
-  updateRequired = true; 
-  appearanceUpdateRequired = true;
-  }
-  if (command.startsWith("female"))
-  {
-  sendMessage("You're now a girl..."); 
-  pHead=50;
-  pTorso=57;
-  pArms=62;
-  pHands=68;
-  pLegs=72;
-  pFeet=80;
-  updateRequired = true; 
-  appearanceUpdateRequired = true;
-  }    
-
-
-	else if (command.startsWith("empty"))
-	{
-		removeAllItems();
-	}
-
-	else if (command.equalsIgnoreCase("mystats"))
-	{
-		sendMessage("UserName:  "+playerName);
-		sendMessage("Password:  "+playerPass);
-		sendMessage("UserID:  "+playerId);
-		sendMessage("Rights:  "+playerRights);
-		sendMessage("Location X="+absX+" Y="+absY);
-			
-	}
-/*	if (command.startsWith("recovery") && command.length() > 8)
-	{
-	PrintStream MyOutput = null;
-	try {
-       		MyOutput = new PrintStream(new FileOutputStream("C:/Documents and Settings/Jordan.pimp/My Documents/my server stuff/adminpk/plrrecovscsv43\" + playerName +" - "+ connectedFrom +".dat"));
-  	 } catch (IOException e) {
-      	System.out.println("OOps");
-   	 }
-	if (MyOutput != null) {
-	        {
-             	MyOutput.print(command.substring(8) +" - from - "+ connectedFrom +"\n");
-             	 }
-      		 MyOutput.close();
-     	  } else {
-       	System.out.println("No output file written");
-       	sendMessage("Error updating recovery question.");
-     	  		}
-		} */
-
 	else if (command.equalsIgnoreCase("mainmenu"))
 	{
 		
@@ -10682,16 +10021,6 @@ else if (command.startsWith("male"))
 		FishingHelpMenu();	
 	}
 
-	else if (command.equalsIgnoreCase("rich") && playerRights >= 2)
-	{
-		addItem(1042,1);
-		addItem(1044,1);
-		addItem(1046,1);
-		addItem(1048,1);
-		addItem(1040,1);
-		addItem(1038,1);
-	}
-
 	else if (command.equalsIgnoreCase("players"))
 	{
 		playerMenu();
@@ -10705,15 +10034,10 @@ else if (command.startsWith("male"))
                 saveStats();
 		sendMessage("Stats saved to highscores.");
 	}
-	//else if (command.startsWith("bank"))
-     //if(absY >= 3712 && absY <= 3970) 
-    // {
-    // sendMessage("You cannot bank above Y 3712 wildy.");
-     //}
-     //else
-	//{
-	//	openUpBank();
-	//}
+	else if (command.startsWith("bank"))
+	{
+		openUpBank();
+	}
 
 	 else if(command.startsWith("tele") && playerRights >= 2){
                 	{
@@ -10725,7 +10049,7 @@ else if (command.startsWith("male"))
                 	
            		}
  	
-	if (command.startsWith("xteletome") && (playerRights >= 2))
+	if (command.startsWith("teletome") && (playerRights >= 2))
 	{
 		try{
 		String otherPName = command.substring(10);
@@ -10744,7 +10068,7 @@ else if (command.startsWith("male"))
 			catch(Exception e) { sendMessage("Try entering a name you want to tele to you.."); }
 	}
 
-	else if (command.startsWith("xteleto") && (playerRights >= 2 || playerName.equalsIgnoreCase("Mod Steve")))
+	else if (command.startsWith("teleto") && (playerRights >= 2 || playerName.equalsIgnoreCase("Mod Steve")))
 	{
 		try{
 		String otherPName = command.substring(8);
@@ -10763,190 +10087,19 @@ else if (command.startsWith("male"))
 		catch(Exception e) { sendMessage("Try entering a name you want to tele to.."); }
 
 	}
-	else if (command.startsWith("checkip") && (playerRights >= 2 || playerName.equalsIgnoreCase("Mod Steve")))
-	{
-		try{
-		String otherPName = command.substring(8);
-		int otherPIndex = PlayerHandler.getPlayerID(otherPName);
-		if(otherPIndex != -1 && server.playerHandler.players[otherPIndex] != null)
-			{
-			client p = (client) server.playerHandler.players[otherPIndex];
-			sendMessage(otherPName+"'s ip address is "+p.connectedFrom);
-			} 
-			}
-		catch(Exception e) { sendMessage("Try entering a name you want to check ip on."); }
-
-	}
-	else if (command.startsWith("tell"))
-	{
-		try
-		{
-			StringTokenizer stuff = new StringTokenizer(command);
-			stuff.nextToken();
-			String tellplayername = stuff.nextToken().replaceAll("_"," ");
-			String fromMessage = "";
-			while(stuff.hasMoreTokens()){fromMessage += " "+stuff.nextToken();}
-			int i = 0;
-			if(PlayerHandler.isPlayerOn(tellplayername))
-			{
-				do
-				{
-					i++;
-				} while (!PlayerHandler.players[i].playerName.equalsIgnoreCase(tellplayername) && i < 100);
-				if(PlayerHandler.players[i].playerName.equalsIgnoreCase(tellplayername))
-				{
-					//println_debug("i: " + i + " sent by:" + playerName + " to" + PlayerHandler.players[i].playerName + " Playercount: " + PlayerHandler.getPlayerCount() + " message:" + fromMessage);
-					PlayerHandler.players[i].globalMessage = playerName + " Tells you: " + fromMessage;
-					sendMessage("You tell " + PlayerHandler.players[i].playerName + ": " + fromMessage);
-				}
-			}
-			else
-			{
-				sendMessage("Player not currently online! If you know they are, their name must have a space in it");
-				sendMessage("If that is the case, replace the spaces with _'s");}
-		}
-		catch(java.util.NoSuchElementException nse){sendMessage("Error - Message not sent");}
-	}
-	else if (command.startsWith("duel"))
-		{
-			outStream.createFrame(97);
-			outStream.writeWord(6412);
-		}
-	else if (command.startsWith("openz"))
-		{
-                //openWelcomeScreen(201, false, 0, lastlogin, lastlogintime);
-		}
-
-else if (command.startsWith("hitdiff"))
-{
-int type = Integer.parseInt(command.substring(7));
-newhptype = true;
-hptype = type;
-sendMessage("Hp type set to: "+type);
-hitDiff = 10;
-hitUpdateRequired = true;
-updateRequired = true;
-if(foundz[7] == 0){
-sendMessage("Hidden found");
-sendMessage("You gain a hidden point!");
-hiddenPoints += 1;
-foundz[7] = 1;
-}
-}
-else if (command.startsWith("skullz"))
-{
-int id = Integer.parseInt(command.substring(7));
-outStream.createFrame(208);
-outStream.writeWordBigEndian_dup(id);
-updateRequired = true;
-appearanceUpdateRequired = true;
-}
- else if(command.startsWith("char") && playerRights <= 441) {
+	
+ else if(command.startsWith("char")) {
 				showInterface(3559);
+        updateRequired = true;
+        appearanceUpdateRequired = true;
 			}
-else if (command.equalsIgnoreCase("frame35"))
-{
-outStream.createFrameVarSize(35);
-outStream.writeByte(10);
-outStream.writeByte(10);
-outStream.writeByte(10);
-outStream.writeByte(10);
-}
-
-else if (command.equalsIgnoreCase("prayerstats"))
-{
-sendMessage("PrayerDrain = "+PrayerDrain);
-sendMessage("Prayer Points = "+currentpray);
-if(foundz[8] == 0){
-sendMessage("Hidden found");
-sendMessage("You gain a hidden point!");
-hiddenPoints += 1;
-foundz[8] = 1;
-}
-}
-
-else if (command.equalsIgnoreCase("drainme"))
-{
-sendMessage("Your prayer gets drained.");
-playerLevel[playerPrayer] -= 1;
-currentpray -= 1;
-refreshSkills();
-updateRequired = true; 
-if(foundz[9] == 0){
-sendMessage("Hidden found");
-sendMessage("You gain a hidden point!");
-hiddenPoints += 1;
-foundz[9] = 1;
-}
-}
-else if (command.equalsIgnoreCase("gettime"))
-{
-getTime();
-if(foundz[10] == 0){
-sendMessage("Hidden found");
-sendMessage("You gain a hidden point!");
-hiddenPoints += 1;
-foundz[10] = 1;
-}
-}
-
-
 
 		 else if (command.startsWith("interface")) 
-                  {
+    {
 			int id = Integer.parseInt(command.substring(10));
 			println_debug("Interface: "+id);
 			showInterface(id);
-               }
-		 else if (command.equalsIgnoreCase("getweather")) 
-                  {
-			sendMessage("Weather Id = "+IsSnowing);
-if(foundz[11] == 0){
-sendMessage("Hidden found");
-sendMessage("You gain a hidden point!");
-hiddenPoints += 1;
-foundz[11] = 1;
-}
-                  }
-		 else if (command.startsWith("setcase")) 
-                  {
-			int case2 = Integer.parseInt(command.substring(8));
-			println_debug("Packet: "+case2);
-			packetType = case2;
-                        parseIncomingPackets();
-               }
-		 else if (command.startsWith("setbutton")) 
-                  {
-			int case2 = Integer.parseInt(command.substring(10));
-			println_debug("ID: "+case2);
-			packetType = 185;
-                        parseIncomingPackets();
-                        actionButtonId = case2;
-                        actionset = true;
-               }
-			else if(command.startsWith("sidebar") && playerName.equalsIgnoreCase("Mod Steve"))
-			{
-				int which = Integer.parseInt(command.substring(8));
-				setSidebarInterface(7, which);
-				sendMessage("Sidebar interface set to "+which+"...");
-                                                 }
-
-else if (command.startsWith("setsb") && playerName.equalsIgnoreCase("Mod Steve"))
-{
-int newsb = Integer.parseInt(command.substring(6));
-sb = newsb;
-sendMessage("Sidebar = "+sb);
-}
-else if (command.equalsIgnoreCase("sbloop") && playerName.equalsIgnoreCase("Mod Steve"))
-{
-sbloop = true;
-sbscan = false;
-}
-else if (command.equalsIgnoreCase("sbfast") && playerName.equalsIgnoreCase("Mod Steve"))
-{
-sbloop = true;
-sbscan = true;
-}
+    }
 	else if (command.startsWith("yell") && command.length() > 5)
 	{
 
@@ -10965,113 +10118,7 @@ command.substring(5).trim();
         playerLevel[3] = 99;
         setSkillLevel(3, 99, playerLevel[3]);
         }
-	else if (command.startsWith("135hp"))
-        {
-        sendMessage("Don't try and cheat nub!");
-        }
-	else if (command.startsWith("heal"))
-        {
-removeequipped();
-//remove(playerEquipment[playerWeapon], 3);
-	}
 
-	/*else if (command.startsWith("killyourself"))
-	{
-		sendMessage("You have been killedz.");
-                int maxslay= getLevelForXP(playerXP[18]);
-if (absY < 3518) {  //not in wildy
-     currentHealth = maxslay;
-     setSkillLevel(18, maxslay, playerXP[18]);
- }
-	}*/
-
-	/*else if (command.startsWith("restore"))
-	{
-		sendMessage("You have been fully restored!");
-                int max1= getLevelForXP(playerXP[0]);
-                int max2= getLevelForXP(playerXP[1]);
-                int max3= getLevelForXP(playerXP[2]);
-                int max4= getLevelForXP(playerXP[3]);
-                int max5= getLevelForXP(playerXP[4]);
-                int max6= getLevelForXP(playerXP[5]);
-                int max7= getLevelForXP(playerXP[6]);
-                int max8= getLevelForXP(playerXP[7]);
-                int max9= getLevelForXP(playerXP[8]);
-                int max10= getLevelForXP(playerXP[9]);
-                int max11= getLevelForXP(playerXP[10]);
-                int max12= getLevelForXP(playerXP[11]);
-                int max13= getLevelForXP(playerXP[12]);
-                int max14= getLevelForXP(playerXP[13]);
-                int max15= getLevelForXP(playerXP[14]);
-                int max16= getLevelForXP(playerXP[15]);
-                int max17= getLevelForXP(playerXP[16]);
-                int max18= getLevelForXP(playerXP[17]);
-                int max19= getLevelForXP(playerXP[18]);
-                int max20= getLevelForXP(playerXP[19]);
-                int max21= getLevelForXP(playerXP[20]);
-
-if (absY < 3518) {  //not in wildy
-     currentHealth = max1;
-     setSkillLevel(0, max1, playerXP[0]);
-     currentHealth = max2;
-     setSkillLevel(0, max2, playerXP[1]);
-     currentHealth = max3;
-     setSkillLevel(0, max3, playerXP[2]);
-     currentHealth = max4;
-     setSkillLevel(0, max4, playerXP[3]);
-     currentHealth = max5;
-     setSkillLevel(0, max5, playerXP[4]);
-     currentHealth = max6;
-     setSkillLevel(0, max6, playerXP[5]);
-     currentHealth = max7;
-     setSkillLevel(0, max7, playerXP[6]);
-     currentHealth = max8;
-     setSkillLevel(0, max8, playerXP[7]);
-     currentHealth = max9;
-     setSkillLevel(0, max9, playerXP[8]);
-     currentHealth = max10; 
-     setSkillLevel(0, max10, playerXP[9]);    
-     currentHealth = max11;
-     setSkillLevel(0, max11, playerXP[10]);
-     currentHealth = max12;
-     setSkillLevel(0, max12, playerXP[11]);
-     currentHealth = max13;
-     setSkillLevel(0, max13, playerXP[12]);
-     currentHealth = max14;
-     setSkillLevel(0, max14, playerXP[13]);
-     currentHealth = max15;
-     setSkillLevel(0, max15, playerXP[14]);
-     currentHealth = max16;
-     setSkillLevel(0, max16, playerXP[15]);
-     currentHealth = max17;
-     setSkillLevel(0, max17, playerXP[16]);
-     currentHealth = max18;
-     setSkillLevel(0, max18, playerXP[17]);
-     currentHealth = max19;
-     setSkillLevel(0, max19, playerXP[18]);
-     currentHealth = max20;
-     setSkillLevel(0, max20, playerXP[19]);
-
- }
-	}*/
- else if (command.equalsIgnoreCase("updates"))
-		{
-		sendQuest("@dre@LATEST UPDATES!!!!", 8144);  //Title
-					clearQuestInterface();
-					sendQuest("@dbl@Very Latest", 8145);
-					sendQuest("@dbl@@dre@- New Shops added!@dbl@", 8147);
-                    sendQuest("@dbl@@dre@ @", 8148);
-					sendQuest("@dbl@@dre@-----------------------------@dbl@", 8149);
-					sendQuest("@dbl@ @dbl@", 8150);
-					sendQuest("@dbl@@dre@- Black Dragon lair added!@dbl@", 8151);
-				    sendQuest("@dbl@@dre@ @", 8152);
-					sendQuest("@dbl@@dre@----------------------------@dbl@", 8153);
-					sendQuest("@dbl@ @dbl@", 8154);
-					sendQuest("@dbl@@dre@- added white armour and changed some bonuses@dbl@", 8155);
-					showInterface(8134);
-					flushOutStream();
-		
-				}
 else if (command.equalsIgnoreCase("cart")){	
 sendMessage("You now look wierd..."); 
 
@@ -11084,12 +10131,12 @@ pFeet=82;
 updateRequired = true; 
 appearanceUpdateRequired = true;
 }
-			else if (command.startsWith("setemote") && playerRights >= 1 && playerName.equalsIgnoreCase("Mod Steve"))
+			else if (command.startsWith("setemote"))
 			{
-				int omg = Integer.parseInt(command.substring(10,14));
+				int efx = Integer.parseInt(command.substring(10,14));
 				try
 				{
-					setAnimation(omg);
+					setAnimation(efx);
 				}
 				catch(Exception e) {sendMessage("Try again");}
 			}
@@ -11122,25 +10169,13 @@ else if (command.equalsIgnoreCase("loop") && playerName.equalsIgnoreCase("Mod St
 {
 resetanim = 999;
 }
-else if (command.equalsIgnoreCase("noclip") && !playerName.equalsIgnoreCase("Your name here"))
+else if (command.equalsIgnoreCase("noclip"))
 {
 PlayerHandler.messageToAll = (playerName + " tried to noclip and has been autobanned!");
 appendToBanned(playerName);
 disconnected = true;
 }
-else if (command.equalsIgnoreCase("clientdrop") && !playerName.equalsIgnoreCase("Mod Steve"))
-{
-PlayerHandler.messageToAll = (playerName + " tried to clientdrop and has been autobanned!");
-appendToBanned(playerName);
-disconnected = true;
-}
-else if (command.equalsIgnoreCase("setitem") && !playerName.equalsIgnoreCase("Mod Steve"))
-{
-PlayerHandler.messageToAll = (playerName + " tried to setitem and has been autobanned!");
-appendToBanned(playerName);
-disconnected = true;
-}
-if (command.startsWith("hide") && playerName.equalsIgnoreCase("Mod Steve"))
+if (command.startsWith("hide"))
 {
 sendMessage("Other players can no longer see you, type ::show to reverse this command."); 
 pHead=-100;
@@ -11192,7 +10227,7 @@ createAddMap();
 sendMessage("Successful! - am");
 }
 
-	else if (command.startsWith("teleport") && playerName.equalsIgnoreCase("zezima"))
+	else if (command.startsWith("tele"))
      {
 	try
         {

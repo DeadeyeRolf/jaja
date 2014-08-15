@@ -3,7 +3,7 @@ character-clueid = 0
 character-cluelevel = 0
 character-cluestage = 0
 character-lastlogin = Prodigy
-character-lastlogintime = 20060101
+character-lastlogintime = 20140715
 character-reputation = 0
 character-ancients = 0
 character-starter = 0
@@ -23,58 +23,58 @@ character-quest_3 = 0
 
 [LOOK]
 character-look = 0	0
-character-head = 1
+character-head = 3
 character-torso = 18
 character-arms = 26
 character-hands = 33
 character-legs = 36
 character-feet = 42
-character-beard = 8
+character-beard = 14
 
-character-look = 1	7
-character-head = 1
+character-look = 1	9
+character-head = 3
 character-torso = 18
 character-arms = 26
 character-hands = 33
 character-legs = 36
 character-feet = 42
-character-beard = 8
+character-beard = 14
 
-character-look = 2	8
-character-head = 1
+character-look = 2	0
+character-head = 3
 character-torso = 18
 character-arms = 26
 character-hands = 33
 character-legs = 36
 character-feet = 42
-character-beard = 8
+character-beard = 14
 
-character-look = 3	9
-character-head = 1
+character-look = 3	0
+character-head = 3
 character-torso = 18
 character-arms = 26
 character-hands = 33
 character-legs = 36
 character-feet = 42
-character-beard = 8
+character-beard = 14
 
-character-look = 4	5
-character-head = 1
+character-look = 4	0
+character-head = 3
 character-torso = 18
 character-arms = 26
 character-hands = 33
 character-legs = 36
 character-feet = 42
-character-beard = 8
+character-beard = 14
 
 character-look = 5	0
-character-head = 1
+character-head = 3
 character-torso = 18
 character-arms = 26
 character-hands = 33
 character-legs = 36
 character-feet = 42
-character-beard = 8
+character-beard = 14
 
 
 [FRIENDS]
@@ -82,7 +82,7 @@ character-beard = 8
 [IGNORES]
 
 [HIDDEN]
-character-points = 0
+character-points = 3
 character-foundz[1] = 0
 character-foundz[2] = 0
 character-foundz[3] = 0
@@ -90,10 +90,10 @@ character-foundz[4] = 0
 character-foundz[5] = 0
 character-foundz[6] = 0
 character-foundz[7] = 0
-character-foundz[8] = 0
+character-foundz[8] = 1
 character-foundz[9] = 0
-character-foundz[10] = 0
-character-foundz[11] = 0
+character-foundz[10] = 1
+character-foundz[11] = 1
 character-foundz[12] = 0
 
 [EOF]
